@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FunMobile</string>
+    <string name="title_activity_main">FunMobile</string>
+    <string name="package_name">fun.farfar.utoolsmobile</string>
+    <string name="custom_url_scheme">fun.farfar.utoolsmobile</string>
+</resources>
