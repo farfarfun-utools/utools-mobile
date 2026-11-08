@@ -5,12 +5,15 @@ Android application with built-in FunOTP and FunLink views. The app reuses their
 ## First version
 
 - OTP: TOTP, HOTP and Steam codes, add or edit an account, scan an `otpauth://` QR code with the camera/file picker, import and export FunOTP JSON backups.
-- Bookmarks: search, filter by category, open HTTP(S) links, add or edit links, favorites, trash and restore, import and export FunLink JSON backups.
+- Bookmarks: search, filter by category, choose among a bookmark's HTTP(S) URLs, edit all category assignments, favorites, trash and restore, import and export FunLink JSON backups.
+- The interface follows the Android system light/dark setting. The Android back button closes a sheet before leaving the current view.
 - Android data is stored with `@aparajita/capacitor-secure-storage` using AES-GCM, Android Keystore and SharedPreferences. Browser development mode uses `localStorage` and is not secure storage.
 
 The Android app icon uses the shared farfarfun brand asset from `farfarfun/.github/brand`.
 
 The phone app and desktop uTools plugins currently keep **separate local data**. Importing a backup replaces the phone's data for that module after confirmation. Exported backups are plaintext, especially OTP secrets. There is no automatic sync yet.
+
+If stored data cannot be read, that module stops writes and cannot export an empty replacement backup. A valid backup can still be imported to recover it.
 
 ## Build
 
