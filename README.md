@@ -2,6 +2,16 @@
 
 Android application with built-in FunOTP and FunLink views. The app reuses their backup formats and pure business logic; it does not install or run `.upxs` packages.
 
+## Screenshots
+
+These previews use sample data and the UI bundled in the Android APK, rendered at a 390px mobile viewport.
+
+<p>
+  <img src="docs/screenshots/otp.png" alt="OTP codes" width="250">
+  <img src="docs/screenshots/bookmarks.png" alt="Bookmarks" width="250">
+  <img src="docs/screenshots/bookmark-edit-dark.png" alt="Bookmark editor in dark mode" width="250">
+</p>
+
 ## First version
 
 - OTP: TOTP, HOTP and Steam codes, add or edit an account, scan an `otpauth://` QR code with the camera/file picker, import and export FunOTP JSON backups.
@@ -17,7 +27,7 @@ If stored data cannot be read, that module stops writes and cannot export an emp
 
 ## Build
 
-GitHub Actions runs tests, builds the web assets, syncs Capacitor and compiles a debug APK. Download `funmobile-debug-apk` from a successful workflow run. The APK is signed with the Android debug key and is for testing, not store distribution.
+GitHub Actions runs tests, builds the web assets, syncs Capacitor and compiles a debug APK. Download the APK from the [v0.1.0 release](https://github.com/farfarfun-utools/utools-mobile/releases/tag/v0.1.0) or the `funmobile-debug-apk` artifact of a successful workflow run. The APK is signed with the Android debug key and is for testing, not store distribution.
 
 For development in an environment that permits local builds, use `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm build`, `pnpm android:sync`, then build the Android project with Gradle. This workspace runs builds and tests through GitHub Actions.
 
