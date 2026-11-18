@@ -27,7 +27,9 @@ If stored data cannot be read, that module stops writes and cannot export an emp
 
 ## Build
 
-GitHub Actions runs tests, builds the web assets, syncs Capacitor and compiles a debug APK. Download the APK from the [v0.1.0 release](https://github.com/farfarfun-utools/utools-mobile/releases/tag/v0.1.0) or the `funmobile-debug-apk` artifact of a successful workflow run. The APK is signed with the Android debug key and is for testing, not store distribution.
+GitHub Actions runs tests, builds the web assets, syncs Capacitor and compiles a debug APK. Download the APK from the [v0.1.1 release](https://github.com/farfarfun-utools/utools-mobile/releases/tag/v0.1.1) or the `funmobile-debug-apk` artifact of a successful workflow run. The APK is signed with the Android debug key and is for testing, not store distribution.
+
+When upgrading from v0.1.0, export both OTP and bookmark backups from the old app and store them outside the app. Check that both backup files are readable and contain the expected accounts and bookmarks before uninstalling the old app. The Actions runners generate different debug signing certificates, so Android requires a fresh install. Import both backups after installing the new APK.
 
 For development in an environment that permits local builds, use `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm build`, `pnpm android:sync`, then build the Android project with Gradle. This workspace runs builds and tests through GitHub Actions.
 
