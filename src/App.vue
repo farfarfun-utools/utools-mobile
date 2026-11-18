@@ -622,7 +622,7 @@ onUnmounted(() => {
         type="button"
         aria-label="数据导入与导出"
         title="数据导入与导出"
-        :disabled="busy"
+        :disabled="!ready || busy"
         @click="openData"
       >
         <MoreVertical :size="21" />
