@@ -31,7 +31,7 @@ GitHub Actions runs tests, builds the web assets, syncs Capacitor and compiles a
 
 When upgrading from v0.1.0, export both OTP and bookmark backups from the old app and store them outside the app. Check that both backup files are readable and contain the expected accounts and bookmarks before uninstalling the old app. The Actions runners generate different debug signing certificates, so Android requires a fresh install. Import both backups after installing the new APK.
 
-For development in an environment that permits local builds, use `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm build`, `pnpm android:sync`, then build the Android project with Gradle. This workspace runs builds and tests through GitHub Actions.
+For development in an environment that permits local builds, use `sh build.sh` to run tests and build web assets, or `RUN_ANDROID=1 sh build.sh` to also sync Capacitor and build the debug APK with Gradle. This workspace runs builds and tests through GitHub Actions.
 
 ## Source
 
